@@ -1,7 +1,7 @@
 from datetime import datetime
 from .db import db
 
-class Group_Member(db.Model):
+class GroupMember(db.Model):
     __tablename__ = 'group_members'
     group_id = db.Column(db.String, db.ForeignKey('groups.id'), nullable=False, primary_key=True)
     user_id = db.Column(db.String, db.ForeignKey('users.id'), nullable=False, primary_key=True)

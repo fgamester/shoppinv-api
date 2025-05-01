@@ -1,6 +1,6 @@
 from .db import db
 
-class Shopping_List_Item(db.Model):
+class ShoppingListItem(db.Model):
     __tablename__ = 'shopping_list_items'
     list_id = db.Column(db.String, db.ForeignKey('shopping_lists.id'), nullable=False, primary_key=True)
     item_id = db.Column(db.String, db.ForeignKey('items.id'), nullable=False, primary_key=True)
